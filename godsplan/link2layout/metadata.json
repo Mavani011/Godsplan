@@ -1,0 +1,6 @@
+{
+  "name": "GodsPlan AI",
+  "description": "A premium personalized discovery and path planning assistant powered by AI. Explore dining, academic institutions, travel, and custom trajectories curated for your destiny.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "GodsPlan",
+  "description": "An ultra-premium personal concierge and pathing engine exploring culinary edge, academic trajectories, and secret locations, styled with heavy bold brutalist typography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

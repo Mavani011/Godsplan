@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  color: #eaf4ff;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #030816;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+* {
+  transition: background-color 0.22s ease, color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+html {
+  min-height: 100%;
+  background: radial-gradient(circle at top right, rgba(124, 58, 237, 0.16), transparent 22%),
+    radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.12), transparent 18%),
+    #020713;
+}
+
+body {
+  min-height: 100vh;
+  color: #eaf4ff;
+  background: transparent;
+  font-family: var(--font-sans);
+}
+
+button,
+input,
+textarea,
+select {
+  transition: all 0.18s ease;
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.35);
+  color: #fff;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 12s linear infinite;
+}
+
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: floatUp 6s ease-in-out infinite;
+}
+
+.glass-card {
+  background: rgba(12, 20, 42, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 32px 120px rgba(0, 0, 0, 0.28);
+}
+
+.panel-soft {
+  background: rgba(9, 14, 29, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold text-white shadow-[0_16px_55px_rgba(124,58,237,0.18)];
+  background: linear-gradient(135deg, rgba(124, 58, 237, 1), rgba(59, 130, 246, 0.9));
+}
+
+.button-primary:hover {
+  transform: translateY(-1px);
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 border border-white/10 text-sm font-semibold text-[#d3e4fe];
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.bg-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.border-soft {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.text-muted {
+  color: rgba(226, 240, 255, 0.72);
+}

@@ -1,0 +1,75 @@
+{
+  "entities": {
+    "users": {
+      "fields": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "preferences": {
+          "type": "map",
+          "fields": {
+            "cuisine": { "type": "array", "items": { "type": "string" } },
+            "education": { "type": "array", "items": { "type": "string" } },
+            "destinations": { "type": "array", "items": { "type": "string" } },
+            "aiIntensity": { "type": "number" }
+          }
+        }
+      }
+    },
+    "items": {
+      "fields": {
+        "id": { "type": "string" },
+        "category": { "type": "string" },
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "description": { "type": "string" },
+        "matchPercentage": { "type": "number" },
+        "rating": { "type": "number" },
+        "distance": { "type": "string" },
+        "location": { "type": "string" },
+        "rank": { "type": "string" },
+        "image": { "type": "string" },
+        "details": {
+          "type": "map",
+          "fields": {
+            "aiPerspective": { "type": "string" },
+            "bestTime": { "type": "string" },
+            "priceGuide": { "type": "string" }
+          }
+        }
+      }
+    },
+    "saved_plans": {
+      "fields": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "itemId": { "type": "string" },
+        "savedAt": { "type": "string" }
+      }
+    },
+    "reviews": {
+      "fields": {
+        "id": { "type": "string" },
+        "itemId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userAvatar": { "type": "string" },
+        "rating": { "type": "number" },
+        "text": { "type": "string" },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "timestamp": { "type": "string" },
+        "helpfulCount": { "type": "number" }
+      }
+    },
+    "alerts": {
+      "fields": {
+        "id": { "type": "string" },
+        "type": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "time": { "type": "string" },
+        "category": { "type": "string" },
+        "tag": { "type": "string" }
+      }
+    }
+  }
+}
